@@ -20,7 +20,6 @@ def main():
     assert len(text) == len(ENTRY.encode("utf-8"))
     out_dir = "/output"
     os.makedirs(out_dir, exist_ok=True)
-    os.chmod(out_dir, 0o755)
     path = os.path.join(out_dir, "entry.txt")
     with open(path, "w", encoding="utf-8") as f:
         f.write(ENTRY)
